@@ -2,6 +2,7 @@
 
 namespace App\Models;
 
+use Illuminate\Database\Eloquent\Casts\Attribute;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Relations\HasMany;
@@ -19,8 +20,10 @@ class Developer extends Model
         'seniority' => 'integer',
     ];
 
-    public function tasks(): HasMany
+
+    public function getWorkingHours(): int
     {
-        return $this->hasMany(Task::class);
+       return config('assignment.developer.working_hours');
     }
+
 }

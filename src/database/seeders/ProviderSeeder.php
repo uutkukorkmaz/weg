@@ -16,13 +16,13 @@ class ProviderSeeder extends Seeder
     {
         $providers = [
             [
-                'name' => 'Provider 1 - (Foo)',
+                'name' => 'foo',
                 'url' => 'https://www.mocky.io/v2/5d47f235330000623fa3ebf7',
                 'resolver' => Foo::class,
                 'is_active' => 1,
             ],
             [
-                'name' => 'Provider 2 - (Bar)',
+                'name' => 'bar',
                 'url' => 'https://www.mocky.io/v2/5d47f24c330000623fa3ebfa',
                 'resolver' => Bar::class,
                 'is_active' => 1,

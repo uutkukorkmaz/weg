@@ -14,9 +14,9 @@ class DefaultProvider extends TaskProvider
         return Method::GET;
     }
 
-    public function retrieveTasks()
+    public function retrieveTasks(): \Illuminate\Support\Collection
     {
-        return;
+        return collect();
     }
 
 }

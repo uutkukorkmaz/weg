@@ -1,7 +1,8 @@
-# Normod Coding Case Study
+# WEG Coding Case Study
 
 ## Installation
 
+-----
 ### macOS
 
 #### Pre-requisites
@@ -17,7 +18,7 @@ There is only one step required to install the project on macOS. Make script wil
 make build
 make migrate
 ```
-
+-----
 ### Linux / Windows
 
 #### Pre-requisites
@@ -48,3 +49,11 @@ make migrate
     ```bash
     php artisan migrate --seed
     ```
+
+## Notes
+
+Task will be populated when the seeder runs. Alternatively you can call the following command to populate the database with the all providers' data.
+
+```bash
+php artisan app:populate-tasks
+```

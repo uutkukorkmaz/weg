@@ -50,7 +50,7 @@ abstract class TaskProvider implements \App\Contracts\TaskProvider
         return $this->provider->url;
     }
 
-    abstract public function retrieveTasks();
+    abstract public function retrieveTasks(): \Illuminate\Support\Collection;
 
     /**
      * @throws \Exception

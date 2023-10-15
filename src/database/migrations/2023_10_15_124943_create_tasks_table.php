@@ -14,7 +14,6 @@ return new class extends Migration
         Schema::create('tasks', function (Blueprint $table) {
             $table->id();
             $table->foreignId('provider_id')->constrained('providers');
-            $table->foreignId('assignee_id')->constrained('developers');
             $table->string('name');
             $table->integer('difficulty');
             $table->integer('estimated_duration_in_hours');

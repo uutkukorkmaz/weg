@@ -13,6 +13,10 @@ return new class extends Migration
     {
         Schema::create('providers', function (Blueprint $table) {
             $table->id();
+            $table->string('name')->unique();
+            $table->string('url')->unique();
+            $table->string('resolver')->default("App\\TaskProviders\\DefaultProvider");
+            $table->tinyInteger('is_active')->default(1);
             $table->timestamps();
         });
     }

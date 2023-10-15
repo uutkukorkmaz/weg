@@ -2,9 +2,21 @@
 
 namespace App\TaskProviders;
 
-use App\Contracts\TaskProvider;
+use App\Abstract\TaskProvider;
+use app\Enums\Http\AuthType;
+use app\Enums\Http\Method;
 
-class DefaultProvider implements TaskProvider
+class DefaultProvider extends TaskProvider
 {
+
+    protected function getRetrieveMethod(): Method
+    {
+        return Method::GET;
+    }
+
+    public function retrieveTasks()
+    {
+        return;
+    }
 
 }
